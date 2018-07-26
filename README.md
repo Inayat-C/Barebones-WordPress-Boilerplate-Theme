@@ -43,4 +43,5 @@ It would look something like this:
 ## To-do
 
 - Add a theme cover image
+- Create a more useful 404 template
 - Replace gulp with webpack!
