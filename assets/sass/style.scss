@@ -1,0 +1,58 @@
+/*
+Theme Name: Barebones
+Theme URI: https://github.com/Inayat-C/Barebones-WordPress-Boilerplate-Theme
+Author: Inayat Cassambai
+Author URI: https://github.com/Inayat-C/Barebones-WordPress-Boilerplate-Theme
+Description: A WordPress starter theme optimised to contain only the required dependancies you'll need for every project.
+Version: 1.0.0
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Base
+# Helpers
+# Forms
+# Layout
+# Modules
+# Pages
+# Vendors
+
+---------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+@import "Base/global-variables";
+@import "Base/normalize";
+
+/*---------------------------------------------------------------
+# Helpers
+--------------------------------------------------------------*/
+@import "Helpers/mixins";
+@import "Helpers/clearfix";
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+@import "Forms/links";
+@import "Forms/buttons";
+
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+@import "Layout/grid";
+@import "Layout/header";
+@import "Layout/navigation";
+@import "Layout/footer";
+
+/*--------------------------------------------------------------
+# Modules
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Pages
+--------------------------------------------------------------*/
+@import "Pages/home";
+
+/*--------------------------------------------------------------
+# Vendors
+--------------------------------------------------------------*/

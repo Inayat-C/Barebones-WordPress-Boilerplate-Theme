@@ -1,0 +1,17 @@
+@import "colors";
+@import "typography";
+
+//Bootstrap Variable Overrides
+
+//Spacing 
+$spacer: 2.5rem;
+$spacers: ();
+$spacers: map-merge((
+  0: 0,
+  1: ($spacer * .25),   // 10px
+  2: ($spacer * .5),    // 20px
+  3: $spacer,           // 40px
+  4: ($spacer * 1.5),   // 60px
+  5: ($spacer * 2),     // 80px
+  6: ($spacer * 2.5)    // 100px
+), $spacers);

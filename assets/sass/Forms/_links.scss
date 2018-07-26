@@ -1,0 +1,13 @@
+a {
+	color: inherit;
+  	text-decoration: none;
+
+	&:focus {
+		outline: thin dotted;
+	}
+	
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+}

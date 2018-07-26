@@ -1,0 +1,56 @@
+@import "node_modules/bootstrap/scss/bootstrap-grid";
+@import "node_modules/bootstrap/scss/utilities/spacing";
+
+//Overwrite Bootstrap containers
+.container {
+	width: 90%;
+  	margin: 0 auto;
+  	position: relative;
+    padding: 0;
+    max-width: 90%;
+
+	@include media-breakpoint-up(lg) {
+    	max-width: 90rem;
+  	}
+
+  	&-fluid {
+    	max-width: none;
+    	width: auto;
+        position: relative;
+        padding: 0;
+  	}
+	  	
+  	&-narrow {
+    	width: 90%;
+    	margin-left: auto;
+    	margin-right: auto;
+        position: relative;
+        max-width: 90%;
+
+    	@include media-breakpoint-up(lg) {
+      		width: 80%;
+      		max-width: 60rem;
+    	}
+  	}
+}
+
+// Utility Classes
+
+.no-sroll {
+    overflow: hidden;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
