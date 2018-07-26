@@ -36,7 +36,7 @@ It would look something like this:
 
 ```
 <div class="ob-image">
-<img src="https://images.unsplash.com/photo-1532572204213-a43b97556045?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4896eb0c6605ee360a949b1c20e90df7&auto=format&fit=crop&w=634&q=80">
+  <img src="https://images.unsplash.com/photo-1532572204213-a43b97556045?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4896eb0c6605ee360a949b1c20e90df7&auto=format&fit=crop&w=634&q=80">
 </div>
 ```
 
