@@ -40,7 +40,7 @@ It would look something like this:
 </div>
 ```
 
-## To-doå
+## To-do
 
 - Add a theme cover image
 - Create a more useful 404 template
