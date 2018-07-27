@@ -16,7 +16,7 @@ An overview of what this theme contains:
 
 ## Get Started
 
-Run `npm init` to install all the required dependancies to the theme. Then run `gulp watch` to begin watching your `SASS` and `JS` files. You may need to also run `npm gulp install` if `gulp watch` throws an error. 
+Run `npm install` to install all the required dependancies to the theme. Then run `gulp watch` to begin watching your `SASS` and `JS` files.
 
 You can now start building your WordPress theme! Any changes you make to your SASS files will be compiled to CSS when you save the `style.scss` file. The JS files all live in the `assets/js/build/` directory and compiles to `scripts.min.js` in the `assets/js/` directory.
 
