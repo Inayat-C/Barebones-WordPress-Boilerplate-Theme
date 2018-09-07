@@ -45,3 +45,5 @@ It would look something like this:
 - Add a theme cover image
 - Create a more useful 404 template
 - Replace gulp with webpack!
+- Move Utility classes into it's own utility scss file
+- Update Gulp to 4.0 and remove gulp dependancies that are not required (pump, order).
