@@ -6,14 +6,12 @@ const 	gulp = require('gulp'),
 		notify = require('gulp-notify'),
 		concat = require('gulp-concat'),
 		rename = require('gulp-rename'),
-		pump = require('pump'),
 		babel = require('gulp-babel'),
-		order = require("gulp-order"),
 		uglify = require('gulp-uglify');
 
 gulp.task('watch', () => { 
-	gulp.watch('assets/sass/*.scss', ['sass']);
-	gulp.watch('assets/js/build/*.js', ['js']);
+	gulp.watch('assets/sass/*.scss', gulp.series('sass'));
+	gulp.watch('assets/js/build/*.js', gulp.series('js'));
 });
 
 gulp.task('sass', () => {
@@ -27,18 +25,15 @@ gulp.task('sass', () => {
     	.pipe(notify({ message: 'Succesfully compiled' }));
 });
 
-gulp.task('js', (cb) => {
-	pump([
-		gulp.src('assets/js/build/*.js'),
-		babel({ presets: ['env'] }),
-  		order([
-			'assets/js/build/modernizr.js',
-			'assets/js/build/polyfills.js',
-		]),	
-		concat('scripts.js'),
-		uglify(),
-		rename('scripts.min.js'),
-		gulp.dest('assets/js')
-	], cb);
+gulp.task('js', () => {
+	return gulp.src([
+		'assets/js/build/modernizr.js',
+		'assets/js/build/polyfills.js',
+		'assets/js/build/script.js',		
+	])
+		.pipe(babel({ presets: ['env'] }))
+		.pipe(concat('scripts.js'))
+		.pipe(uglify())
+		.pipe(rename('scripts.min.js'))
+		.pipe(gulp.dest('assets/js'));
 });
-
