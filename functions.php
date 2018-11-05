@@ -14,11 +14,9 @@ function my_assets() {
 }
 add_action( 'wp_enqueue_scripts', 'my_assets' );
 
-if ( ! function_exists( 'theme_setup' ) ) :
 // Sets up theme defaults and registers support for various WordPress features.
 function theme_setup() {
     
-    add_theme_support( 'automatic-feed-links' );
     add_theme_support( 'post-thumbnails' );
     add_theme_support( 'menus' );
 
@@ -31,7 +29,6 @@ function theme_setup() {
         'caption',
     ) );
 }
-endif;
 add_action( 'after_setup_theme', 'theme_setup' );
 
 // Remove Emoji Support
@@ -45,18 +42,10 @@ function remove_comment_reply_script(){
 add_action('init','remove_comment_reply_script');
 
 // Removes comments from admin menu
-add_action( 'admin_menu', 'my_remove_admin_menus' );
 function my_remove_admin_menus() {
     remove_menu_page( 'edit-comments.php' );
 }
-
-// Removes comments from post and pages
-add_action('init', 'remove_comment_support', 100);
-
-function remove_comment_support() {
-    remove_post_type_support( 'post', 'comments' );
-    remove_post_type_support( 'page', 'comments' );
-}
+add_action( 'admin_menu', 'my_remove_admin_menus' );
 
 // Removes comments from admin bar
 function mytheme_admin_bar_render() {
@@ -64,6 +53,13 @@ function mytheme_admin_bar_render() {
     $wp_admin_bar->remove_menu('comments');
 }
 add_action( 'wp_before_admin_bar_render', 'mytheme_admin_bar_render' );
+
+// Removes comments from post and pages
+function remove_comment_support() {
+    remove_post_type_support( 'post', 'comments' );
+    remove_post_type_support( 'page', 'comments' );
+}
+add_action('init', 'remove_comment_support', 100);
 
 // Remove query strings for static resources
 function _remove_script_version( $src ){
