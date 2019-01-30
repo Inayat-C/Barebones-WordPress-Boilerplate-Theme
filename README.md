@@ -8,7 +8,7 @@ An overview of what this theme contains:
 - `SASS` ready.
 - Bootstrap 4 Flexbox Grid.
 - A `package.json` file with all the dependancies required for the theme.
-- Gulp file which compiles SASS, concatenates & minifies CSS, concatenates & minifies JS, compiles JS with Babel and adds vendor prefixes to CSS.
+- Webpack config which compiles SASS, minifies CSS & JS in production, compiles JS with Babel and adds vendor prefixes to CSS.
 - Functions file with some snippets that remove bloatware from WordPress such as oEmbed scripts, comments, emoji support and more.  
 - Polyfills for `Array.from()` and `object-fit`.
 - Modernizr.
@@ -16,11 +16,9 @@ An overview of what this theme contains:
 
 ## Get Started
 
-Run `npm install` to install all the required dependancies to the theme. Then run `gulp watch` to begin watching your `SASS` and `JS` files.
+Run `npm install` to install all the required dependancies to the theme. Then run `npm run watch` to begin watching your `SASS` and `JS` files.
 
-You can now start building your WordPress theme! Any changes you make to your SASS files will be compiled to CSS when you save the `style.scss` file. The JS files all live in the `assets/js/build/` directory and compiles to `scripts.min.js` in the `assets/js/` directory.
-
-For debugging Javascript when developing, you can remove `uglify()` from the `js` task in `gulp`. Just remember to add it back in when your pushing to production!   
+You can now start building your WordPress theme! Any changes you make to your SASS files will be compiled to CSS when you save a `.scss` file. The JS files all live in the `assets/js/build/` directory and compiles to `scripts.min.js` in the `assets/js/` directory.
 
 ## Theme Structure
 
@@ -44,5 +42,4 @@ It would look something like this:
 
 - Add a theme cover image
 - Create a more useful 404 template
-- Replace gulp with webpack!
 - Move Utility classes into it's own utility scss file.
