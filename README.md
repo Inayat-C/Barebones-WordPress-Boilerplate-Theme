@@ -41,4 +41,3 @@ It would look something like this:
 ## To-do
 
 - Add a theme cover image
-- Move Utility classes into it's own utility scss file.
