@@ -8,6 +8,12 @@
 				<?php the_excerpt(); ?>
 				<button> <a href="<?php the_permalink(); ?>"> Read More </a> </button>
 			</section>
+
+			<section>
+				<h3> Not found what you are looking for? </h3>
+				<p> Try another search: </p>
+				<?php get_search_form(); ?>
+			</section>
 			
 		<?php endwhile; else : ?>
 
