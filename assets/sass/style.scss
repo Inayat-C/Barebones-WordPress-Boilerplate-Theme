@@ -12,8 +12,7 @@ Version: 1.0.0
 ----------------------------------------------------------------
 # Base
 # Helpers
-# Forms
-# Layout
+# Components
 # Modules
 # Pages
 # Vendors
@@ -30,30 +29,28 @@ Version: 1.0.0
 --------------------------------------------------------------*/
 @import "Helpers/mixins";
 @import "Helpers/clearfix";
+@import "Helpers/utilities";
+@import "Helpers/object-fit-polyfill";
 
 /*--------------------------------------------------------------
-# Forms
+# Components
 --------------------------------------------------------------*/
-@import "Forms/links";
-@import "Forms/buttons";
+@import "Components/grid";
+@import "Components/header";
+@import "Components/footer";
 
 /*--------------------------------------------------------------
-# Layout
---------------------------------------------------------------*/
-@import "Layout/grid";
-@import "Layout/header";
-@import "Layout/navigation";
-@import "Layout/footer";
-
-/*--------------------------------------------------------------
-# Modules
+# Blocks
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
 # Pages
 --------------------------------------------------------------*/
-@import "Pages/home";
+// If styles for specific pages required, created Pages folder
+// and import the files here.
 
 /*--------------------------------------------------------------
 # Vendors
 --------------------------------------------------------------*/
+// For third party libraries, create a Vendor folder and import
+// it's styles here.
