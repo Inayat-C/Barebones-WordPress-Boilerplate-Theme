@@ -1,3 +1,1 @@
-(function ($) {
-
-})(jQuery); // End document.ready()
+// Go wild...
