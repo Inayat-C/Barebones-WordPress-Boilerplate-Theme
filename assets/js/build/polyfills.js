@@ -8,7 +8,7 @@
 */
 
 if (!Modernizr.objectfit) {
-    const imgContainer = [...document.querySelectorAll('.ob-image')];
+    const imgContainer = document.querySelectorAll('.ob-image');
 
     imgContainer.forEach((el) => {
         const imgURL = el.querySelector('img').src;
