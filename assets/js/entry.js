@@ -1,3 +1,7 @@
+/*
+ * Webpack Entry Point.
+*/
+
 // Scripts
 import './build/modernizr.js';
 import './build/polyfills.js';
