@@ -10,7 +10,7 @@ An overview of what this theme contains:
 - A `package.json` file with all the dependancies required for the theme.
 - Webpack config which compiles SASS, minifies CSS & JS in production, compiles JS with Babel and adds vendor prefixes to CSS.
 - Functions file with some snippets that remove bloatware from WordPress such as oEmbed scripts, comments, emoji support and more.  
-- Polyfills for `Array.from()` and `object-fit`.
+- Polyfills for `object-fit`.
 - Modernizr.
 - Normalize.
 
