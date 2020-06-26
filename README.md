@@ -16,7 +16,7 @@ An overview of what this theme contains:
 -   Main scripts and styles file enqueued and ready to use.
 -   A series of functions which removes bloatware from WordPress to speed up your site.
 
-#### :ok_hand: &nbsp; CSS
+#### :ok_hand: &nbsp; CSS
 
 -   Bootstrap 4 Flexbox Grid - You don't need the whole library if you just need the grid!
 -   Normalize.css included.
