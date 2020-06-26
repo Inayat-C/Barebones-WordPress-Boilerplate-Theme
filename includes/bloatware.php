@@ -1,9 +1,8 @@
 <?php 
 
 /**
-* Removing things from the WP core that you may not need 
-* which will speed up your site
-*
+ * Removing things from the WP core that you may not need to increase the speed of your site.
+ * You can safely remove any of these snippets.
 **/
 
 // Remove Emoji Support
@@ -36,10 +35,10 @@ function remove_comment_support() {
 }
 add_action('init', 'remove_comment_support', 100);
 
-/*
-* Remove query strings for static resources.
-* Note: You probably only want this in production as some CDN's and webservers can't cache files with query strings.
-*/
+/**
+ * Remove query strings for static resources.
+ * Note: You probably only want this in production as some CDN's and webservers can't cache files with query strings.
+**/
 function _remove_script_version( $src ){
     $parts = explode( '?ver', $src );
     return $parts[0];
